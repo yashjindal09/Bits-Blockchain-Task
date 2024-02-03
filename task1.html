@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Shop</title>
+    <link rel="stylesheet" href="task1.css">
+</head>
+<body>
+  <header>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+  </div>
+    <h1>Item Shop</h1>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button id="searchButton">Search</button>
+    </div>
+    <div class="categories">
+      <label for="categorySelect">Category:</label>
+      <select id="categorySelect">
+          <option value="all">All</option>
+          <option value="clothing">Clothing</option>
+          <option value="electronics">Electronics</option>
+          <option value="accessories">Accessories</option>
+          
+      </select>
+  </div>
+  <div class="filters">
+    <label for="priceRange">Price Range:</label>
+    <select id="priceRange">
+        <option value="all">All</option>
+        <option value="0-500">0 Rs. - 500 Rs.</option>
+        <option value="501-3000">501 Rs. - 3000 Rs.</option>
+        <option value="3001-8000">3001 Rs. - 8000 Rs.</option>
+        
+    </select>
+</div>
+    <button id="connectButton">Connect Wallet</button>
+</header>
+<div id="mobileMenu" class="mobile-menu">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Products</a>
+  <a href="#">Contact</a>
+</div>
+
+    
+    <main>
+        <div class="item">
+            <img src="https://imgs.search.brave.com/B0lim5FZ9qqq5ZtIf5iEjTn3usu6b5uFr47SZbBlsLg/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/MTI0NDY4MTYwNDIt/NDQ0ZDY0MTI2N2Q0/P3E9ODAmdz0xMDAw/JmF1dG89Zm9ybWF0/JmZpdD1jcm9wJml4/bGliPXJiLTQuMC4z/Jml4aWQ9TTN3eE1q/QTNmREI4TUh4elpX/RnlZMmg4TW54OFlX/MWhlbTl1SlRJd1lX/eGxlR0Y4Wlc1OE1I/eDhNSHg4ZkRBPQ.jpeg" alt="Item 1">
+            <button class="itemButton" onclick="showDetails('Amazon Alexa')">View Details</button>
+        </div>
+        
+        <div class="item">
+            <img src="https://imgs.search.brave.com/M2oca4CL3K2etlB01GvRRhjOy3chAjg1Ju6AxqtUoE0/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/MDc0NTczNzk0NzAt/MDhiODAwYmViYzY3/P3E9ODAmdz0xMDAw/JmF1dG89Zm9ybWF0/JmZpdD1jcm9wJml4/bGliPXJiLTQuMC4z/Jml4aWQ9TTN3eE1q/QTNmREI4TUh4elpX/RnlZMmg4TVRsOGZI/QnNZWGx6ZEdGMGFX/OXVKVEl3Tlh4bGJu/d3dmSHd3Zkh4OE1B/PT0.jpeg" alt="Item 2">
+            <button class="itemButton" onclick="showDetails('Sony PS5')">View Details</button>
+        </div>
+
+        <div class="item">
+          <img src="https://imgs.search.brave.com/86EjYBM2TMgKpZU6fSSy8l-UOK66DQMsKJZADclYeIU/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE2/MjI0MzQ2NDE0MDYt/YTE1ODEyMzQ1MGY5/P3E9ODAmdz0xMDAw/JmF1dG89Zm9ybWF0/JmZpdD1jcm9wJml4/bGliPXJiLTQuMC4z/Jml4aWQ9TTN3eE1q/QTNmREI4TUh4elpX/RnlZMmg4TVRoOGZI/ZGhkR05vZkdWdWZE/QjhmREI4Zkh3dw.jpeg" alt="Item 3">
+          <button class="itemButton" onclick="showDetails('Fossil  Watch')">View Details</button>
+      </div>
+
+      <div class="item">
+        <img src="https://imgs.search.brave.com/9yubhWQWSdgZW_YFWNi8GoWHxlfw3Dz1Mw5L3phRtGc/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9naWZ0/bGFiLmNvL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDE5LzA4LzQx/Yzd0a2I2MkwuanBn" alt="Item 4">
+        <button class="itemButton" onclick="showDetails('Mouse')">View Details</button>
+    </div>
+
+    <div class="item">
+      <img src="https://imgs.search.brave.com/6mtTf_Ibt2Qvx07RIco-Rr7ZvPBZXgEkLaQ7qGwdPuQ/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZW5z/Z2Vhci5iLWNkbi5u/ZXQvd3AtY29udGVu/dC91cGxvYWRzLzIw/MTkvMDMvaW1hZ2Ut/MDEuanBn" alt="Item 5">
+      <button class="itemButton" onclick="showDetails('Electric Scooty')">View Details</button>
+  </div>
+
+  <div class="item">
+    <img src="https://imgs.search.brave.com/xCzx9tPS8T4Uz0m099eeTfND7TlS7DfejG38JBA6iFU/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL2htZy1wcm9k/L2ltYWdlcy9taC0x/MC0zLWRhZC1naWZ0/cy02NTFjMjRlN2I4/NWUyLnBuZz9jcm9w/PTAuNTAyeHc6MS4w/MHhoOzAuNDk4eHcs/MCZyZXNpemU9MzYw/Oio" alt="Item 6">
+    <button class="itemButton" onclick="showDetails('Jacket')">View Details</button>
+</div>
+        
+        
+    </main>
+
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="itemName"></h2>
+            <img id="itemImage" src="" alt="">
+            <p>Item description lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button id="buyButton">Buy Now</button>
+        </div>
+    </div>
+
+    <script src="task1.js"></script>
+</body>
+</html>
